@@ -1,5 +1,6 @@
 package my.demo;
 
+import my.demo.route.SoapClientRoute;
 import org.apache.camel.main.Main;
 
 /**

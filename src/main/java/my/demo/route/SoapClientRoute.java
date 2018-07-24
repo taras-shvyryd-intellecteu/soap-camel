@@ -1,4 +1,4 @@
-package my.demo;
+package my.demo.route;
 
 import my.demo.model.Multiply;
 import org.apache.camel.CamelContext;
