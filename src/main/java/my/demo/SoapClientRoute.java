@@ -19,7 +19,6 @@ public class SoapClientRoute extends RouteBuilder {
         CxfEndpoint cxfEndpoint = new CxfEndpoint();
         cxfEndpoint.setAddress("http://www.dneonline.com/calculator.asmx");
         cxfEndpoint.setCamelContext(camelContext);
-        cxfEndpoint.setWsdlURL("calculator.wsdl");
         cxfEndpoint.setDataFormat(DataFormat.RAW);
 
         try {
