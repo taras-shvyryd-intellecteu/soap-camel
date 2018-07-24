@@ -1,5 +1,5 @@
 
-package my.demo.tempuri;
+package my.demo.model;
 
 import javax.xml.bind.annotation.*;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.*;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="MultiplyResult" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="DivideResult" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -25,28 +25,28 @@ import javax.xml.bind.annotation.*;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "multiplyResult"
+    "divideResult"
 })
-@XmlRootElement(name = "MultiplyResponse")
-public class MultiplyResponse {
+@XmlRootElement(name = "DivideResponse")
+public class DivideResponse {
 
-    @XmlElement(name = "MultiplyResult")
-    protected int multiplyResult;
+    @XmlElement(name = "DivideResult")
+    protected int divideResult;
 
     /**
-     * Gets the value of the multiplyResult property.
+     * Gets the value of the divideResult property.
      * 
      */
-    public int getMultiplyResult() {
-        return multiplyResult;
+    public int getDivideResult() {
+        return divideResult;
     }
 
     /**
-     * Sets the value of the multiplyResult property.
+     * Sets the value of the divideResult property.
      * 
      */
-    public void setMultiplyResult(int value) {
-        this.multiplyResult = value;
+    public void setDivideResult(int value) {
+        this.divideResult = value;
     }
 
 }

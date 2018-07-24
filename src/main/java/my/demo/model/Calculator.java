@@ -1,5 +1,5 @@
 
-package my.demo.tempuri;
+package my.demo.model;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.*;
@@ -13,14 +13,14 @@ import java.net.URL;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "Calculator", targetNamespace = "http://tempuri.org/", wsdlLocation = "file:/home/taras/demos/soap/camel1/client/src/main/resources/calculator.wsdl")
+@WebServiceClient(name = "Calculator", targetNamespace = "http://model.org/", wsdlLocation = "file:/home/taras/demos/soap/camel1/client/src/main/resources/calculator.wsdl")
 public class Calculator
     extends Service
 {
 
     private final static URL CALCULATOR_WSDL_LOCATION;
     private final static WebServiceException CALCULATOR_EXCEPTION;
-    private final static QName CALCULATOR_QNAME = new QName("http://tempuri.org/", "Calculator");
+    private final static QName CALCULATOR_QNAME = new QName("http://model.org/", "Calculator");
 
     static {
         URL url = null;
@@ -65,7 +65,7 @@ public class Calculator
      */
     @WebEndpoint(name = "CalculatorSoap")
     public CalculatorSoap getCalculatorSoap() {
-        return super.getPort(new QName("http://tempuri.org/", "CalculatorSoap"), CalculatorSoap.class);
+        return super.getPort(new QName("http://model.org/", "CalculatorSoap"), CalculatorSoap.class);
     }
 
     /**
@@ -77,7 +77,7 @@ public class Calculator
      */
     @WebEndpoint(name = "CalculatorSoap")
     public CalculatorSoap getCalculatorSoap(WebServiceFeature... features) {
-        return super.getPort(new QName("http://tempuri.org/", "CalculatorSoap"), CalculatorSoap.class, features);
+        return super.getPort(new QName("http://model.org/", "CalculatorSoap"), CalculatorSoap.class, features);
     }
 
     private static URL __getWsdlLocation() {

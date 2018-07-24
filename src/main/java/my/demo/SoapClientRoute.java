@@ -1,6 +1,6 @@
 package my.demo;
 
-import my.demo.tempuri.Multiply;
+import my.demo.model.Multiply;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.cxf.CxfEndpoint;
@@ -22,14 +22,14 @@ public class SoapClientRoute extends RouteBuilder {
         cxfEndpoint.setDataFormat(DataFormat.RAW);
 
         try {
-            cxfEndpoint.setServiceClass("my.demo.tempuri.Calculator");
+            cxfEndpoint.setServiceClass("my.demo.model.Calculator");
             camelContext.addEndpoint("calculator", cxfEndpoint);
         } catch (Exception e) { e.printStackTrace(); }
 
         Multiply mul = new Multiply();
         mul.setIntA(5);
         mul.setIntB(18);
-        SoapJaxbDataFormat soapDF = new SoapJaxbDataFormat("my.demo.tempuri");
+        SoapJaxbDataFormat soapDF = new SoapJaxbDataFormat("my.demo.model");
 
         from("timer:foo?period=60000&repeatCount=1")
                 .process(exchange -> exchange.getIn().setBody(mul))
